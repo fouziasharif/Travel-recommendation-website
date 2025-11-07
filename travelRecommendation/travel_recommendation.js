@@ -14,17 +14,14 @@ const clearsearch = () => {
 clearbtn.addEventListener("click", clearsearch);
 
 const showResult = (name, img, info) => {
-  if (mydiv.style.display === "none" || mydiv.style.display === "") {
-    mydiv.style.display = "block";
-  } else {
-    mydiv.style.display = "none";
-  }
+  mydiv.style.display = "block"; // always show
   result.innerHTML = `
     <h2 class="title">${name}</h2>
-    <img class="search-img" src=${img} alt="sofia">
+    <img class="search-img" src="${img}" alt="${name}">
     <p class="description">${info}</p>
   `;
 };
+
 
 const closeDropdown = () => {
   mydiv.style.display = "none";
